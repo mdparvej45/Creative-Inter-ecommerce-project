@@ -1,0 +1,194 @@
+.toggle-sidebar,
+.toggle-sidebar1,
+.toggle-sidebar2,
+.toggle-sidebar3 {
+	width: 600px;
+	position: fixed;
+	top: 0;
+    right: -600px;
+	height: 100vh;
+    transition: ease all 0.8s;
+    -webkit-transition: ease all 0.8s;
+    -ms-transition: ease all 0.8s;
+	background: rgba(52, 67, 87, 0.64);
+    z-index: 1001;
+	&.sidebar-popup {
+		right: 0;
+		width: 100%;
+		transition: ease all 0.8s; 
+		-webkit-transition: ease all 0.8s;
+		-ms-transition: ease all 0.8s;
+	}
+}
+.sidebar-layout {
+	background-color: $color-white;
+	max-width: 500px;
+	width: 100%;
+	position: absolute;
+	right: 0;
+	height: 100vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.sidebar-header {
+	a {
+		width: 50px;
+		height: 50px;
+		background: $background-4;
+		color: $color-white;
+		font-size: 24px;
+		position: $__absolute;
+		right: 500px;
+		top: 20px;
+		@extend %flex-align-center;
+	}
+}
+.sidebar-body {
+	padding: 40px;
+	.login-group {
+		&.login-forget {
+			p {
+				margin-bottom: 25px;
+				font-size: $font-sm;
+			}
+		}
+		.register-policy {
+			p {
+				font-size: $font-sm;
+				margin: 10px 0 20px;
+			}
+		}
+		.remember-me {
+			.form-check-label {
+				margin-bottom: 20px;
+				input {
+					&:focus {
+						box-shadow: none;
+					}
+				}
+			}
+			
+		}
+		h5 {
+			font-size: 24px;
+			margin-bottom: 25px;
+		}
+		.form-group {
+			margin-bottom: 25px;;
+		}
+		.form-control {
+			border: 1px solid $border-color-7;
+			border-radius: 7px;
+			min-height: 50px;
+			&:focus {
+				border: 1px solid $color-brand;
+			}
+		}
+		.pass-group {
+			position: relative;
+			.toggle-password {
+				@include pass-eye;
+			}
+			.conform-password {
+				@include pass-eye;
+			}
+		}
+		.forgot-pass {
+			margin-bottom: 25px;
+			a {
+				text-decoration: underline;
+				color: $color-black;
+			}
+		}
+		.login-pharmacy {
+			.btn-primary {
+				background-color: $color-brand;
+				border: 0;
+				color: $color-white;
+				font-size: $font-md;
+				padding: 18px 15px;
+			}
+		}
+		.create-account {
+			p {
+				font-size: 18px;
+				text-align: center;
+				a {
+					color: $color-brand;
+				}
+			}
+			&.create-sign {
+				p {
+					position: absolute;
+					bottom: 20px;
+					width: 100%;
+					left: 0;
+				}
+			}
+		}
+	}
+	.view-address {
+		.btn-primary {
+			background-color: $color-white;
+			border: 1px solid $color-brand;
+			color: $color-brand;
+			@extend %flex-align-center;
+			padding: 9px 15px;
+			font-size: 18px;
+		}
+	}
+    .ventor-groups {
+        display: none;
+    }
+	.register-method {
+		.custom_radio {
+			color: $color-black;
+			display: inline-flex;
+			align-items: center;
+			position: relative;
+			font-size: $font-sm;
+			padding-left: 30px;
+			margin-bottom: 10px;
+			cursor: pointer;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			input:checked ~ .checkmark {
+				background-color: $color-brand;
+				&:after {
+					opacity: 1;
+				}
+			}
+			input {
+				position: absolute;
+				opacity: 0;
+			}
+			.checkmark {
+				position: absolute;
+				left: 0;
+				height: 25px;
+				width: 25px;
+				background-color: $border-color-3;
+				border-radius: 50%;
+				&:after {
+					display: block;
+					content: "";
+					position: absolute;
+					opacity: 0;
+					top: 6px;
+					left: 6px;
+					width: 13px;
+					height: 13px;
+					border-radius: 50%;
+					background: $color-white;
+					-moz-transition: all 0.3s ease-in-out;
+					-o-transition: all 0.3s ease-in-out;
+					-webkit-transition: all 0.3s ease-in-out;
+					-ms-transition: all 0.3s ease-in-out;
+					transition: all 0.3s ease-in-out;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,200 @@
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid $border-color;
+    border-radius: 7px;
+    .card-header {
+        padding: 20px;
+        margin-bottom: 0;
+        background-color: #f7f8f9;
+        border-bottom: 1px solid $border-color;
+    }
+    .card-body {
+        padding: 20px;
+    }
+}
+.account {
+    .card {
+        .card-header {
+            border: 0;
+            background: none;
+            .card-title {
+                font-weight: 500;
+                font-size: 24px;
+                color: $color-black;
+                margin-bottom: 0;
+            }
+            .card-sub-title {
+                font-weight: 500;
+                font-size: 18px;
+                color: $color-brand;
+                margin-bottom: 0;
+            }
+            .card-content {
+                font-weight: 500;
+                font-size: 18px;
+                color: $color-black;
+                margin-bottom: 0;
+            }
+            .bg-ordered {
+                font-weight: 400;
+                width: 85px;
+                height: 38px;
+                background: #FFC700;
+                color: $color-black;
+                border-radius: 7px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .account-edit {
+                .edit-modal-btn {
+                    font-size: 14px;
+                }
+                span {
+                    font-size: 14px;
+                    color: $color-grey-2;
+                    margin: 0 5px;
+                }
+                .modal-btn-address {
+                    font-weight: 500;
+                    font-size: 14px;
+                    color: $color-white;
+                    background: $color-brand;
+                        border: 1px solid $color-brand;
+                    border-radius: 7px;
+                    padding: 10px 18px;
+                    &:hover {
+                        background: $color-brand-dark;
+                        border: 1px solid $color-brand-dark;
+                    }
+                }
+            }
+            .invoice-btn {
+                background: $color-white;
+                border: 1px solid $color-brand;
+                border-radius: 7px;
+                color: #EB4648;
+                font-weight: 500;
+                padding: 13px 10px;
+                &:hover {
+                    background: $color-brand;
+                    border: 1px solid $color-brand;
+                    color: $color-white; 
+                }
+            }
+        }
+        .card-header-border {
+            border-bottom: 1px solid $border-color;
+            padding-top: 0;
+            padding-left: 0;
+            padding-right: 0;
+            .account-edit {
+                @include respond-below(custom767) {
+                   margin-top: 10px;
+                }
+            }
+            @include respond-below(custom767) {
+                flex-wrap: wrap;
+            }
+        }
+        .card-header-ordered {
+           border-bottom: 1px solid $border-color; 
+        }
+        .profile-body {
+            p {
+                color: $color-black;
+                font-size: 16px;
+                span {
+                    color: $color-grey-2;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+        .card-details {
+            padding-top: 20px;
+        }
+        .card-details  {
+            .edit-book {
+                background: $background-15;
+                font-size: $font-sm;
+                padding: 7px 18px;
+                border-radius: 5px;
+                color: $color-grey-10;
+                margin-right: 15px;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+            .delete-book {
+                background: $background-16;
+                font-size: $font-sm;
+                padding: 7px 18px;
+                border-radius: 5px;
+                color: $color-16;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+            p {
+                font-size: 15px;
+                color: $color-black;
+                border-bottom: 1px solid $border-color;
+                padding-bottom: 15px;
+                margin-bottom: 20px;
+                line-height: 28px;
+                i {
+                    color: $color-brand;
+                    margin-right: 5px;
+                }
+            }
+            span {
+                margin:0 5px;
+            }
+            .card-delivery {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p {
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    line-height: normal;
+                }
+                .btn {
+                    background: #FFFFFF;
+                    border: 1px solid #EB4648;
+                    border-radius: 7px;
+                    color: #EB4648;
+                    font-weight: 500;
+                    padding: 13px 10px;
+                    &:hover {
+                        background: #EB4648;
+                        border: 1px solid #EB4648;
+                        color: #fff; 
+                    }
+                }
+            }
+        }
+        .card-details-title {
+            font-weight: 500;
+            font-size: 18px;
+            color: $color-black;
+            margin-bottom: 20px;
+        }
+
+        table td, table th {border: 0;}
+        .table > thead {
+            font-family: $font-heading;
+            font-size: $font-lg;
+        }
+    }
+}

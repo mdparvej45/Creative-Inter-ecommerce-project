@@ -1,0 +1,69 @@
+.accordion-item {
+    margin-bottom: 20px;
+    border: 0;
+	.accordion-button {
+		border-radius: 7px 7px 0 0 !important;
+		border-bottom-width: 0;
+		font-size: 18px;
+		&.collapsed {
+			border-bottom-width: 1px;
+			border-radius: 7px !important;
+			background-color: $border-color;
+			color: $color-black;
+		}
+		&:not(.collapsed) {
+			background-color: $color-white;
+			color: $color-brand !important;
+			&::after {
+				filter: brightness(0);
+			}
+		}
+		&:focus {
+			box-shadow: none;
+			border-color: $border-color;
+		}
+	}
+	.accordion-collapse {
+		border-width: 1px;
+		.accordion-body {
+			font-size: 15px;
+		}
+	}
+}
+.dashboard-menu {
+	.accordion-button {
+		border: 0;
+	}
+	.accordion-button:hover {
+       color: $color-brand !important; 
+    }
+	.accordion-button:focus {
+	    z-index: 3;
+	    border-color: transparent;
+	    outline: 0;
+	    box-shadow: unset;
+	}
+	.accordion-button:after {
+	    display: none;
+	}
+	.accordion-button:not(.collapsed) {
+	    background-color: transparent;
+		color: $color-brand;
+		i {
+			color: $color-brand;
+		}
+	}
+	.accordion-button:not(.collapsed)::after {
+	    background: transparent;
+	}
+	.accordion-collapse {
+	    border: 0;
+	    border-width: 0;
+		margin-top: 15px;
+	}
+}
+
+
+
+
+
